@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_designs/dukaan.dart';
-import 'package:ui_designs/dukan_home.dart';
+import 'package:ui_designs/dukaan_payments.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -14,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:Dukan(),
+      home:PaymentScreen(),
+      
     );
   }
 }

@@ -31,7 +31,7 @@ class CardStore extends StatelessWidget {
   final text1;
   final text2;
   final newStatus;
-  final textStyles=const TextStyle(fontSize: 15, fontWeight: FontWeight.bold);
+  final textStyles = const TextStyle(fontSize: 15, fontWeight: FontWeight.bold);
   CardStore(
       {Key? key,
       required this.boxIcon,
@@ -102,6 +102,51 @@ class CardStore extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+//########################## Payment field listtile refactor
+
+class PaymentTile extends StatelessWidget {
+  final text1;
+  final text2;
+  final tileIcon;
+  const PaymentTile(
+      {Key? key,
+      required this.text1,
+      required this.text2,
+      this.tileIcon = Icons.arrow_forward_ios_outlined})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Text(text1),
+      trailing: Wrap(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 5),
+            child: Text(text2),
+          ),
+          Icon(tileIcon),
+        ],
+      ),
+    );
+  }
+}
+
+//##############################..Pyment overview grid
+
+class PaymentContainer extends StatelessWidget {
+  const PaymentContainer({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 40,
+      width: 40,
+      color: Colors.red,
     );
   }
 }
