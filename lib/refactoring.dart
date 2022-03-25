@@ -139,14 +139,31 @@ class PaymentTile extends StatelessWidget {
 //##############################..Pyment overview grid
 
 class PaymentContainer extends StatelessWidget {
-  const PaymentContainer({ Key? key }) : super(key: key);
+  final containercolor;
+  final text1;
+  final text2;
+  const PaymentContainer({
+    required this.containercolor,
+    required this.text1,
+    required this.text2,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40,
-      width: 40,
-      color: Colors.red,
+      decoration: BoxDecoration(borderRadius:BorderRadius.circular(10),color: containercolor),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(text1,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.white),),
+            Text(text2,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35,color: Colors.white),),
+          ],
+        ),
+      ),
+      
     );
   }
 }
