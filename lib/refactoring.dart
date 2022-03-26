@@ -288,3 +288,48 @@ class OrdersTile extends StatelessWidget {
     );
   }
 }
+
+// ####################..Premium page features..###########
+
+class PremiumFeatures extends StatelessWidget {
+  final title;
+  final subTitle;
+  final tileIcon;
+  const PremiumFeatures({
+    Key? key,
+    required this.title,
+    required this.subTitle,
+    required this.tileIcon,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 18.0),
+      child: ListTile(
+        contentPadding: EdgeInsets.only(left: 0.0, right: 0.0),
+        leading: Container(
+          width: 50,
+          height:50,
+          decoration: BoxDecoration(border: Border.all(
+      color: Colors.blue,
+    ),borderRadius: BorderRadius.all(Radius.circular(25)),),
+          child: Icon(
+            tileIcon,
+            color: Colors.blue,
+            size: 30,
+          ),
+        ),
+        title: Text(
+          title,
+          style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+        ),
+        subtitle: Text(
+          subTitle,
+          style: TextStyle(height: 1.5, fontSize: 15),
+        ),
+        // leading:,
+      ),
+    );
+  }
+}
