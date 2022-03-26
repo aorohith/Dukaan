@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_designs/dukaan.dart';
-import 'package:ui_designs/dukaan_payments.dart';
+import 'package:ui_designs/dukaan_premium.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -13,7 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:PaymentScreen(),
+      
+      home:PremiumPage(),
       
     );
   }
