@@ -211,3 +211,80 @@ class TransactionButtons extends StatelessWidget {
     );
   }
 }
+
+//###########################...Dukaan Payments list tyle section...###############################
+
+class OrdersTile extends StatelessWidget {
+  final assets;
+  final orderId;
+  final orderDate;
+  final orderAmount;
+  final accNo;
+  const OrdersTile({
+    Key? key,
+    required this.assets,
+    required this.orderId,
+    required this.orderDate,
+    required this.orderAmount,
+    required this.accNo,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ListTile(
+          contentPadding: EdgeInsets.only(left: 0),
+          leading: Container(width: 40, height: 40, child: Image.asset(assets)),
+          title: Text(
+            orderId,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          subtitle: Text(orderDate),
+          trailing: Padding(
+            padding: const EdgeInsets.only(top: 18.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  "₹ $orderAmount",
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Wrap(children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 2.0, right: 4.0),
+                    child: Icon(
+                      Icons.circle,
+                      color: Colors.green,
+                      size: 10,
+                    ),
+                  ),
+                  Text(
+                    "Succcesful",
+                    style: TextStyle(color: Colors.grey, fontSize: 15),
+                  ),
+                ]),
+              ],
+            ),
+          ), //right of tile
+        ),
+        Text(
+          "₹ $orderAmount deposited to $accNo",
+          style: TextStyle(
+            color: Colors.grey,
+            fontStyle: FontStyle.italic,
+          ),
+        ),
+        const Divider(
+          thickness: 1,
+        ),
+      ],
+    );
+  }
+}

@@ -8,7 +8,7 @@ class PaymentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Payments"),
+        title: const Text("Payments"),
         centerTitle: true,
         actions: const [
           Padding(
@@ -63,23 +63,23 @@ class PaymentScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  PaymentTile(
+                  const PaymentTile(
                       text1: "Default Method", text2: "Online Payments"),
-                  PaymentTile(text1: "Payment Profile", text2: "Bank Account"),
+                  const PaymentTile(text1: "Payment Profile", text2: "Bank Account"),
                   const Divider(
                     height: 20,
                     thickness: 1,
                     indent: 20,
                     endIndent: 20,
                   ),
-                  PaymentTile(
+                  const PaymentTile(
                       text1: "Payments Overview",
                       text2: "Life Time",
                       tileIcon: Icons.keyboard_arrow_down_outlined),
                 ],
               ),
               GridView(
-                children: [
+                children: const [
                   PaymentContainer(
                       containercolor: Colors.orange,
                       text1: 'AMOUNT ON HOLD',
@@ -89,32 +89,158 @@ class PaymentScreen extends StatelessWidget {
                       text1: 'AMOUNT RECIEVED',
                       text2: '₹ 13,332')
                 ],
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     mainAxisSpacing: 5,
                     crossAxisSpacing: 20,
                     childAspectRatio: 60 / 35),
                 shrinkWrap: true,
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 10.0),
                 child: Text(
                   "Transactions",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top:10.0),
+                padding: const EdgeInsets.only(top: 10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    TransactionButtons(text: "On Hold", bgColor: Color.fromARGB(255, 226, 225, 225), fgColor: Colors.grey,size: 88,),
-                    TransactionButtons(text: "Payouts (15)", bgColor: Colors.blue, fgColor: Colors.white,size: 100,),
-                    TransactionButtons(text: "On Hold", bgColor: Color.fromARGB(255, 226, 225, 225), fgColor: Colors.grey,size: 88,),
-                    
+                  children: const [
+                    TransactionButtons(
+                      text: "On Hold",
+                      bgColor: Color.fromARGB(255, 226, 225, 225),
+                      fgColor: Colors.grey,
+                      size: 88,
+                    ),
+                    TransactionButtons(
+                      text: "Payouts (15)",
+                      bgColor: Colors.blue,
+                      fgColor: Colors.white,
+                      size: 100,
+                    ),
+                    TransactionButtons(
+                      text: "On Hold",
+                      bgColor: Color.fromARGB(255, 226, 225, 225),
+                      fgColor: Colors.grey,
+                      size: 88,
+                    ),
                   ],
                 ),
               ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              ),
+              const OrdersTile(
+                assets: "assets/images/user.png",
+                orderId: "Order #12673432",
+                orderDate: "Jul 12, 02:06 PM",
+                orderAmount: "799",
+                accNo: "8938279237947",
+              )
             ],
           ),
         ),
@@ -122,5 +248,3 @@ class PaymentScreen extends StatelessWidget {
     );
   }
 }
-
-
