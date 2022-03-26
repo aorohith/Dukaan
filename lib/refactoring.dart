@@ -151,19 +151,63 @@ class PaymentContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(borderRadius:BorderRadius.circular(10),color: containercolor),
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10), color: containercolor),
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(text1,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.white),),
-            Text(text2,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 35,color: Colors.white),),
+            Text(
+              text1,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color: Colors.white),
+            ),
+            Text(
+              text2,
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 35,
+                  color: Colors.white),
+            ),
           ],
         ),
       ),
-      
+    );
+  }
+}
+
+//############...Dukan Payment Three button row
+
+class TransactionButtons extends StatelessWidget {
+  final text;
+  final bgColor;
+  final fgColor;
+  final double size;
+  const TransactionButtons({
+    Key? key,
+    required this.text,
+    required this.bgColor,
+    required this.fgColor,
+    required this.size,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {},
+      child: Text(text),
+      style: ElevatedButton.styleFrom(
+        primary: bgColor, // background
+        onPrimary: fgColor, // foreground
+        shape: new RoundedRectangleBorder(
+          borderRadius: new BorderRadius.circular(30.0),
+        ),
+        minimumSize: Size(size, 36),
+      ),
     );
   }
 }

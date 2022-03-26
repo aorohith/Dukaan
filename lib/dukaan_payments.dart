@@ -18,13 +18,13 @@ class PaymentScreen extends StatelessWidget {
         ],
       ),
       body: SafeArea(
-        child: ListView(
-          children: [
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: ListView(
+            children: [
+              Column(
+                children: [
+                  Container(
                     height: 180,
                     width: double.infinity,
                     decoration: BoxDecoration(
@@ -63,48 +63,64 @@ class PaymentScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),
-                PaymentTile(text1: "Default Method", text2: "Online Payments"),
-                PaymentTile(text1: "Payment Profile", text2: "Bank Account"),
-                const Divider(
-                  height: 20,
-                  thickness: 1,
-                  indent: 20,
-                  endIndent: 20,
-                ),
-                PaymentTile(
-                    text1: "Payments Overview",
-                    text2: "Life Time",
-                    tileIcon: Icons.keyboard_arrow_down_outlined),
-              ],
-            ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: GridView(
-                    children: [
-                      PaymentContainer(
-                          containercolor: Colors.orange,
-                          text1: 'AMOUNT ON HOLD',
-                          text2: '₹ 0'),
-                      PaymentContainer(
-                          containercolor: Colors.green,
-                          text1: 'AMOUNT RECIEVED',
-                          text2: '₹ 13,332')
-                    ],
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        mainAxisSpacing: 5,
-                        crossAxisSpacing: 20,
-                        childAspectRatio: 60 /35),
-                    shrinkWrap: true,
+                  PaymentTile(
+                      text1: "Default Method", text2: "Online Payments"),
+                  PaymentTile(text1: "Payment Profile", text2: "Bank Account"),
+                  const Divider(
+                    height: 20,
+                    thickness: 1,
+                    indent: 20,
+                    endIndent: 20,
                   ),
+                  PaymentTile(
+                      text1: "Payments Overview",
+                      text2: "Life Time",
+                      tileIcon: Icons.keyboard_arrow_down_outlined),
+                ],
               ),
-            ),
-          ],
+              GridView(
+                children: [
+                  PaymentContainer(
+                      containercolor: Colors.orange,
+                      text1: 'AMOUNT ON HOLD',
+                      text2: '₹ 0'),
+                  PaymentContainer(
+                      containercolor: Colors.green,
+                      text1: 'AMOUNT RECIEVED',
+                      text2: '₹ 13,332')
+                ],
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 5,
+                    crossAxisSpacing: 20,
+                    childAspectRatio: 60 / 35),
+                shrinkWrap: true,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10.0),
+                child: Text(
+                  "Transactions",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top:10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TransactionButtons(text: "On Hold", bgColor: Color.fromARGB(255, 226, 225, 225), fgColor: Colors.grey,size: 88,),
+                    TransactionButtons(text: "Payouts (15)", bgColor: Colors.blue, fgColor: Colors.white,size: 100,),
+                    TransactionButtons(text: "On Hold", bgColor: Color.fromARGB(255, 226, 225, 225), fgColor: Colors.grey,size: 88,),
+                    
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
+
+
