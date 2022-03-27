@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_designs/dukaan_premium.dart';
+import 'package:ui_designs/dukaan.dart';
+
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       
-      home:PremiumPage(),
+      home:Dukan(),
       
     );
   }
