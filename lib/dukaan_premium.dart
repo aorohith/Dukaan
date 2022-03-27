@@ -1,8 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:ui_designs/refactoring.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class PremiumPage extends StatelessWidget {
+class PremiumPage extends StatefulWidget {
   const PremiumPage({Key? key}) : super(key: key);
+
+  @override
+  State<PremiumPage> createState() => _PremiumPageState();
+}
+
+class _PremiumPageState extends State<PremiumPage> {
+  YoutubePlayerController _controller = YoutubePlayerController(
+    initialVideoId: 'PxqKgrykDac',
+    flags: YoutubePlayerFlags(
+      autoPlay: false,
+      mute: true,
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -112,11 +126,10 @@ class PremiumPage extends StatelessWidget {
                     tileIcon: Icons.language_rounded,
                   ),
                   PremiumFeatures(
-                    title: "Custom domain name",
-                    subTitle:
-                        "Get your own custom domain and build \nyour brand on the internet.",
-                    tileIcon: Icons.verified_outlined
-                  ),
+                      title: "Custom domain name",
+                      subTitle:
+                          "Get your own custom domain and build \nyour brand on the internet.",
+                      tileIcon: Icons.verified_outlined),
                   PremiumFeatures(
                     title: "Custom domain name",
                     subTitle:
@@ -132,6 +145,38 @@ class PremiumPage extends StatelessWidget {
                 ],
               ),
             ),
+            Divider(
+              thickness: 4,
+              color: Color.fromARGB(255, 241, 240, 240),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("What is Ducaan Premium?",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 25),),
+                  Padding(
+                    padding: const EdgeInsets.only(top:8.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: YoutubePlayer(
+                        controller: _controller,
+                        showVideoProgressIndicator: true,
+                        progressIndicatorColor: Colors.amber,
+                        progressColors: ProgressBarColors(
+                          playedColor: Colors.amber,
+                        ),
+                      ),
+                    ),
+                  ),
+                  
+                ],
+              ),
+            ),
+            Divider(
+              thickness: 4,
+              color: Color.fromARGB(255, 241, 240, 240),
+            )
           ],
         ),
       ),
