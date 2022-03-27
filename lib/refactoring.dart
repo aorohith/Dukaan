@@ -333,3 +333,34 @@ class PremiumFeatures extends StatelessWidget {
     );
   }
 }
+
+//##################...Premium Contact refactoring..###################
+
+class PremiumContact extends StatelessWidget {
+  final contactIcon;
+  final contactText;
+
+  const PremiumContact({ Key? key, required this.contactIcon, required this.contactText}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Color.fromARGB(255, 223, 223, 223))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Icon(contactIcon),
+                            Text(contactText,style: TextStyle(color: Color.fromARGB(255, 121, 120, 120), fontSize: 15,fontWeight: FontWeight.w600),),
+                          ],
+                        ),
+                      ),
+                    );
+  }
+}
+
+

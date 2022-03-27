@@ -19,6 +19,13 @@ class _PremiumPageState extends State<PremiumPage> {
     ),
   );
 
+  Widget textSame(text) {
+    return Text(
+      text,
+      style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,11 +122,8 @@ class _PremiumPageState extends State<PremiumPage> {
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    "Freatures",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                  ),
+                children: [
+                  textSame("Features"),
                   PremiumFeatures(
                     title: "Custom domain name",
                     subTitle:
@@ -155,10 +159,7 @@ class _PremiumPageState extends State<PremiumPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "What is Ducaan Premium?",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
-                  ),
+                  textSame("What is Ducaan Premium?"),
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0),
                     child: ClipRRect(
@@ -180,58 +181,118 @@ class _PremiumPageState extends State<PremiumPage> {
               thickness: 4,
               color: Color.fromARGB(255, 241, 240, 240),
             ),
-            Column(
-              children: const [
-                Accordion(
-                  title: 'What type of businesses can use Ducaan Premium?',
-                  content:
-                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
-                ),
-                Accordion(
-                  title: 'What type of businesses can use Ducaan Premium?',
-                  content:
-                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
-                ),
-                Accordion(
-                  title: 'What type of businesses can use Ducaan Premium?',
-                  content:
-                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
-                ),
-                Accordion(
-                  title: 'What type of businesses can use Ducaan Premium?',
-                  content:
-                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
-                ),
-                Accordion(
-                  title: 'What type of businesses can use Ducaan Premium?',
-                  content:
-                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
-                ),
-                Accordion(
-                  title: 'What type of businesses can use Ducaan Premium?',
-                  content:
-                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
-                ),
-              ],
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15.0),
+                    child: textSame("Frequently asked question"),
+                  ),
+                  Accordion(
+                    title: 'What type of businesses can use Ducaan Premium?',
+                    content:
+                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                  ),
+                  Accordion(
+                    title: 'What type of businesses can use Ducaan Premium?',
+                    content:
+                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                  ),
+                  Accordion(
+                    title: 'What type of businesses can use Ducaan Premium?',
+                    content:
+                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                  ),
+                  Accordion(
+                    title: 'What type of businesses can use Ducaan Premium?',
+                    content:
+                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                  ),
+                  Accordion(
+                    title: 'What type of businesses can use Ducaan Premium?',
+                    content:
+                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                  ),
+                  Accordion(
+                    title: 'What type of businesses can use Ducaan Premium?',
+                    content:
+                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                  ),
+                ],
+              ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top:15.0),
+              padding: const EdgeInsets.only(top: 15.0),
               child: Divider(
                 thickness: 4,
                 color: Color.fromARGB(255, 241, 240, 240),
               ),
             ),
-
-            Column(
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 15.0, left: 5),
+                    child: textSame("Need help? Get in touch"),
+                  ),
+                  GridView(
+                    children: [
+                      PremiumContact(
+                          contactIcon: Icons.messenger_outline,
+                          contactText: "Live Chat"),
+                      PremiumContact(
+                          contactIcon: Icons.phone_outlined,
+                          contactText: "Phone Call"),
+                    ],
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            mainAxisSpacing: 5,
+                            crossAxisSpacing: 20,
+                            childAspectRatio: 60 / 35),
+                    shrinkWrap: true,
+                  ),
+                ],
+              ),
+            ),
+            Divider(
+              thickness: 2,
+              color: Color.fromARGB(255, 241, 240, 240),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Text("Need help? Get in touch"),
-                
+                Text(
+                  "Select Domain",
+                  style: TextStyle(color: Colors.blue, fontSize: 17,fontWeight: FontWeight.w600),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: 200,
+                    height: 55,
+                    child: ElevatedButton(
+                      style: ButtonStyle(shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)))),
+                      onPressed: () {},
+                      child: Text(
+                        "Get Premium",
+                        style: TextStyle(
+                          fontSize: 18,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ],
             ),
           ],
