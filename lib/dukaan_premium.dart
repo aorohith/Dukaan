@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_designs/premium_contents.dart';
 import 'package:ui_designs/refactoring.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -117,7 +118,7 @@ class _PremiumPageState extends State<PremiumPage> {
                 children: const [
                   Text(
                     "Freatures",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                   ),
                   PremiumFeatures(
                     title: "Custom domain name",
@@ -154,9 +155,12 @@ class _PremiumPageState extends State<PremiumPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("What is Ducaan Premium?",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 25),),
+                  Text(
+                    "What is Ducaan Premium?",
+                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+                  ),
                   Padding(
-                    padding: const EdgeInsets.only(top:8.0),
+                    padding: const EdgeInsets.only(top: 8.0),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(15),
                       child: YoutubePlayer(
@@ -169,14 +173,67 @@ class _PremiumPageState extends State<PremiumPage> {
                       ),
                     ),
                   ),
-                  
                 ],
               ),
             ),
             Divider(
               thickness: 4,
               color: Color.fromARGB(255, 241, 240, 240),
-            )
+            ),
+            Column(
+              children: const [
+                Accordion(
+                  title: 'What type of businesses can use Ducaan Premium?',
+                  content:
+                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                ),
+                Accordion(
+                  title: 'What type of businesses can use Ducaan Premium?',
+                  content:
+                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                ),
+                Accordion(
+                  title: 'What type of businesses can use Ducaan Premium?',
+                  content:
+                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                ),
+                Accordion(
+                  title: 'What type of businesses can use Ducaan Premium?',
+                  content:
+                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                ),
+                Accordion(
+                  title: 'What type of businesses can use Ducaan Premium?',
+                  content:
+                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                ),
+                Accordion(
+                  title: 'What type of businesses can use Ducaan Premium?',
+                  content:
+                      '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
+                      anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                ),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top:15.0),
+              child: Divider(
+                thickness: 4,
+                color: Color.fromARGB(255, 241, 240, 240),
+              ),
+            ),
+
+            Column(
+              children: [
+                Text("Need help? Get in touch"),
+                
+              ],
+            ),
           ],
         ),
       ),
