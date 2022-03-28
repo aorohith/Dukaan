@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:ui_designs/ducaan_catalogue.dart';
 import 'package:ui_designs/dukaan_manage.dart';
 import 'package:ui_designs/dukaan_orders.dart';
 import 'package:ui_designs/dukaan_payments.dart';
 import 'package:ui_designs/dukaan_premium.dart';
+import 'package:ui_designs/dukaan_products.dart';
 import 'package:ui_designs/dukan_account.dart';
 import 'package:ui_designs/dukan_home.dart';
 import 'package:ui_designs/dukan_order_detail.dart';
-import 'package:ui_designs/dukan_products.dart';
 
 class Dukan extends StatefulWidget {
   
@@ -19,7 +20,7 @@ class Dukan extends StatefulWidget {
 class _DukanState extends State<Dukan> {
    int _currentSelectIndex = 0;
   final _pages = [
-    OrderDetailScreen(),
+    CatalogueScreen(),
     PaymentScreen(),
     HomeScreen(),
     PremiumPage(),
