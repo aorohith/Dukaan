@@ -132,7 +132,7 @@ class OrdersTile extends StatelessWidget {
       children: [
         ListTile(
           contentPadding: EdgeInsets.only(left: 0),
-          leading: Container(width: 40, height: 40, child: Image.asset(assets)),
+          leading: Container(width: 50, height: 50, child: Image.asset(assets,fit: BoxFit.cover,),),
           title: Text(
             orderId,
             style: TextStyle(
