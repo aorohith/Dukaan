@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:ui_designs/ducaan_catalogue.dart';
-import 'package:ui_designs/dukaan_manage.dart';
-import 'package:ui_designs/dukaan_orders.dart';
-import 'package:ui_designs/dukaan_payments.dart';
-import 'package:ui_designs/dukaan_premium.dart';
-import 'package:ui_designs/dukaan_products.dart';
-import 'package:ui_designs/dukan_account.dart';
-import 'package:ui_designs/dukan_home.dart';
-import 'package:ui_designs/dukan_order_detail.dart';
+import 'package:ui_designs/Dukaan_Catalogue/ducaan_catalogue.dart';
+import 'package:ui_designs/Dukaan_Manage/dukan_manage.dart';
+import 'package:ui_designs/Dukaan_Payments/dukaan_payments.dart';
+import 'package:ui_designs/Dukaan_Premium/dukaan_premium.dart';
+import 'package:ui_designs/Dukaan_Accounts/dukan_account.dart';
 
 class Dukan extends StatefulWidget {
   
@@ -20,10 +16,10 @@ class Dukan extends StatefulWidget {
 class _DukanState extends State<Dukan> {
    int _currentSelectIndex = 0;
   final _pages = [
-    CatalogueScreen(),
-    PaymentScreen(),
-    HomeScreen(),
     PremiumPage(),
+    PaymentScreen(),
+    CatalogueScreen(),
+    ManageScreen(),
     ContactScreen(),
   ];
   @override

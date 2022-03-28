@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_designs/premium_contents.dart';
-import 'package:ui_designs/refactoring.dart';
+import 'package:ui_designs/Dukaan_Premium/refactor.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class PremiumPage extends StatefulWidget {
@@ -193,39 +192,34 @@ class _PremiumPageState extends State<PremiumPage> {
                   Accordion(
                     title: 'What type of businesses can use Ducaan Premium?',
                     content:
-                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                        'Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.',
+                  ),
+                  Accordion(
+                    title: 'What is your refund policy?',
+                    content:
+                        'Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.',
                   ),
                   Accordion(
                     title: 'What type of businesses can use Ducaan Premium?',
                     content:
-                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                        'Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.',
                   ),
                   Accordion(
                     title: 'What type of businesses can use Ducaan Premium?',
                     content:
-                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                        'Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.',
                   ),
                   Accordion(
                     title: 'What type of businesses can use Ducaan Premium?',
                     content:
-                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                        'Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.',
                   ),
                   Accordion(
                     title: 'What type of businesses can use Ducaan Premium?',
                     content:
-                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
+                        'Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.',
                   ),
-                  Accordion(
-                    title: 'What type of businesses can use Ducaan Premium?',
-                    content:
-                        '''Ducan coters to a wide variety of sellers. Be it a small grocery store or a big legacy brand - 
-                        anyone who wants to sell their products/services online - Ducan is the perfect platform fot you.''',
-                  ),
+                  
                 ],
               ),
             ),

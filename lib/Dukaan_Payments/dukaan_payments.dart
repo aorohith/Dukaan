@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ui_designs/refactoring.dart';
+import 'package:ui_designs/Dukaan_Order_Detail/dukan_order_detail.dart';
+import 'package:ui_designs/Dukaan_Payments/refactor.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({Key? key}) : super(key: key);
@@ -10,10 +11,20 @@ class PaymentScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Payments"),
         centerTitle: true,
-        actions: const [
+        actions: [
           Padding(
             padding: EdgeInsets.all(8.0),
-            child: Icon(Icons.info_outline_rounded),
+            child: IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => OrderDetailScreen(),
+                  ),
+                );
+              },
+              icon: Icon(Icons.info_outline_rounded),
+            ),
           ),
         ],
       ),
@@ -65,7 +76,8 @@ class PaymentScreen extends StatelessWidget {
                   ),
                   const PaymentTile(
                       text1: "Default Method", text2: "Online Payments"),
-                  const PaymentTile(text1: "Payment Profile", text2: "Bank Account"),
+                  const PaymentTile(
+                      text1: "Payment Profile", text2: "Bank Account"),
                   const Divider(
                     height: 20,
                     thickness: 1,
@@ -121,7 +133,7 @@ class PaymentScreen extends StatelessWidget {
                       size: 100,
                     ),
                     TransactionButtons(
-                      text: "On Hold",
+                      text: "Refunds",
                       bgColor: Color.fromARGB(255, 226, 225, 225),
                       fgColor: Colors.grey,
                       size: 88,
@@ -130,112 +142,112 @@ class PaymentScreen extends StatelessWidget {
                 ),
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p1.jpg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p2.jpg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p3.jpg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p4.jpg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p11.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p6.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p7.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p8.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p9.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p10.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p11.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p2.jpg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p1.jpg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p7.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p8.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
                 accNo: "8938279237947",
               ),
               const OrdersTile(
-                assets: "assets/images/user.png",
+                assets: "assets/images/p9.jpeg",
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_designs/refactoring.dart';
+import 'package:ui_designs/Dukaan_Catalogue/refactor.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({Key? key}) : super(key: key);

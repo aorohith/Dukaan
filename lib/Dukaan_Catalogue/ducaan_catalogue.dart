@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_designs/dukaan_products.dart';
+import 'package:ui_designs/Dukaan_Catalogue/dukaan_products.dart';
 
 class CatalogueScreen extends StatelessWidget {
   final List<Tab> myTabs = <Tab>[
