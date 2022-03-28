@@ -310,10 +310,13 @@ class PremiumFeatures extends StatelessWidget {
         contentPadding: EdgeInsets.only(left: 0.0, right: 0.0),
         leading: Container(
           width: 50,
-          height:50,
-          decoration: BoxDecoration(border: Border.all(
-      color: Colors.blue,
-    ),borderRadius: BorderRadius.all(Radius.circular(25)),),
+          height: 50,
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.blue,
+            ),
+            borderRadius: BorderRadius.all(Radius.circular(25)),
+          ),
           child: Icon(
             tileIcon,
             color: Colors.blue,
@@ -340,27 +343,109 @@ class PremiumContact extends StatelessWidget {
   final contactIcon;
   final contactText;
 
-  const PremiumContact({ Key? key, required this.contactIcon, required this.contactText}) : super(key: key);
+  const PremiumContact(
+      {Key? key, required this.contactIcon, required this.contactText})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: Color.fromARGB(255, 223, 223, 223))),
-                      child: Padding(
-                        padding: const EdgeInsets.all(20.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Icon(contactIcon),
-                            Text(contactText,style: TextStyle(color: Color.fromARGB(255, 121, 120, 120), fontSize: 15,fontWeight: FontWeight.w600),),
-                          ],
-                        ),
-                      ),
-                    );
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          border: Border.all(color: Color.fromARGB(255, 223, 223, 223))),
+      child: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Icon(contactIcon),
+            Text(
+              contactText,
+              style: TextStyle(
+                  color: Color.fromARGB(255, 121, 120, 120),
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
+//####################....Order details...####################
+class ReceiptShare extends StatelessWidget {
+  final text1;
+  final text2;
+  final iconData;
+  const ReceiptShare({
+    Key? key,
+    required this.text1,
+    required this.text2,
+    required this.iconData,
+  }) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(text1,
+            style: TextStyle(
+              color: Colors.grey,
+              fontWeight: FontWeight.w600,
+              fontSize: 18,
+            )),
+        Wrap(
+          children: [
+            Icon(iconData, color: Colors.blue),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0, top: 4),
+              child: Text(
+                text2,
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 18,
+                ),
+              ),
+            ),
+          ],
+        )
+      ],
+    );
+  }
+}
+
+//###################......Deepa text style
+Widget addressHead({required address}) {
+  return Text(
+    address,
+    style: TextStyle(
+      fontSize: 20,
+      fontWeight: FontWeight.w600,
+    ),
+  );
+}
+
+Widget textData({required data}) {
+  return Text(
+    data,
+    style: TextStyle(fontSize: 18.0),
+  );
+}
+
+Widget addressFormat({required txt1, required txt2}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      Row(children: [addressHead(address: txt1)]),
+      SizedBox(
+        height: 5,
+      ),
+      Row(children: [textData(data: txt2)])
+    ],
+  );
+}

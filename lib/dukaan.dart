@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ui_designs/dukaan_manage.dart';
 import 'package:ui_designs/dukaan_orders.dart';
 import 'package:ui_designs/dukaan_payments.dart';
+import 'package:ui_designs/dukaan_premium.dart';
 import 'package:ui_designs/dukan_account.dart';
 import 'package:ui_designs/dukan_home.dart';
 import 'package:ui_designs/dukan_order_detail.dart';
@@ -21,7 +22,7 @@ class _DukanState extends State<Dukan> {
     OrderDetailScreen(),
     PaymentScreen(),
     HomeScreen(),
-    ManageScreen(),
+    PremiumPage(),
     ContactScreen(),
   ];
   @override
