@@ -160,7 +160,7 @@ class PaymentScreen extends StatelessWidget {
                 orderId: "Order #12673432",
                 orderDate: "Jul 12, 02:06 PM",
                 orderAmount: "799",
-                accNo: "8938279237947",
+                accNo: "8938279237947", 
               ),
               const OrdersTile(
                 assets: "assets/images/p4.jpg",

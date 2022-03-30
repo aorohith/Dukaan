@@ -8,7 +8,6 @@ class ProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 223, 222, 222),
-      appBar: AppBar(),
       body: SafeArea(
         child: ListView(
           children: [
